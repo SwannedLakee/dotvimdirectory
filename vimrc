@@ -10,3 +10,5 @@ set hlsearch
 set showmatch
 set ignorecase smartcase 
 set spell
+hi clear SpellBad                                                                         
+hi SpellBad cterm=underline

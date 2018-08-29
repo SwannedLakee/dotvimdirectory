@@ -13,3 +13,4 @@ set ignorecase smartcase
 set spell
 hi clear SpellBad                                                                         
 hi SpellBad cterm=underline
+let maplocalleader = "\\"

@@ -1,4 +1,6 @@
-"All setup initially from http://marcgg.com/blog/2016/03/01/vimrc-example/
+"from https://gist.github.com/romainl/9970697
+execute pathogen#infect()
+"All (the rest)setup initially from http://marcgg.com/blog/2016/03/01/vimrc-example/
 filetype on
 syntax on
 set lines=35 columns=150

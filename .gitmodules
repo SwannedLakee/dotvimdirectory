@@ -4,3 +4,6 @@
 [submodule "bundle/CycleColor"]
 	path = bundle/CycleColor
 	url = https://github.com/vim-scripts/CycleColor
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = https://github.com/wincent/command-t

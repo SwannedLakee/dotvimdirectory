@@ -2,6 +2,7 @@
 execute pathogen#infect()
 "All (the rest)setup initially from http://marcgg.com/blog/2016/03/01/vimrc-example/
 filetype on
+filetype plugin on
 syntax on
 set lines=35 columns=150
 set colorcolumn=90

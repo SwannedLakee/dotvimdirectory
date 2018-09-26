@@ -4,8 +4,7 @@ execute pathogen#infect()
 filetype on
 filetype plugin on
 syntax on
-set lines=35 columns=150
-set colorcolumn=90
+set lines=35 columns=90
 set number
 set hidden
 set history=100

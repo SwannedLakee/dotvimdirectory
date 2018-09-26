@@ -1,4 +1,5 @@
 "from https://gist.github.com/romainl/9970697
+set nocompatible
 execute pathogen#infect()
 "All (the rest)setup initially from http://marcgg.com/blog/2016/03/01/vimrc-example/
 filetype on
@@ -13,4 +14,4 @@ set ignorecase smartcase
 set spell
 hi clear SpellBad                                                                         
 hi SpellBad cterm=underline
-let maplocalleader = "\\"
+let g:CommandTMaxFiles=300000

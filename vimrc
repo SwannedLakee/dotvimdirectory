@@ -16,3 +16,5 @@ set spell
 hi clear SpellBad                                                                         
 hi SpellBad cterm=underline
 let g:CommandTMaxFiles=300000
+inoremap jk <esc>
+inoremap <esc> <nop>

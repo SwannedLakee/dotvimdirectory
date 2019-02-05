@@ -18,3 +18,4 @@ hi SpellBad cterm=underline
 let g:CommandTMaxFiles=300000
 inoremap jk <esc>
 inoremap <esc> <nop>
+iabbrev lnn <C-R>=strftime('### %y/%m/%d %H:%M')<C-M>

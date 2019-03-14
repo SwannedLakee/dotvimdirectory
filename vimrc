@@ -18,4 +18,5 @@ hi SpellBad cterm=underline
 let g:CommandTMaxFiles=300000
 inoremap jk <esc>
 inoremap <esc> <nop>
-iabbrev lnn <C-R>=strftime('### %y/%m/%d %H:%M')<C-M>
+iabbrev lnn <C-R>=strftime('## %d/%m/%y %H:%M')<C-M>
+iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>

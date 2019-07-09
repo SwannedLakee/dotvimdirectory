@@ -1,4 +1,5 @@
 "from https://gist.github.com/romainl/9970697
+"There are some system setup notes below. 
 set nocompatible "doens't try and do what VI does 
 execute pathogen#infect() 
 "All (the rest)setup initially from http://marcgg.com/blog/2016/03/01/vimrc-example/
@@ -31,3 +32,10 @@ autocmd FileType markdown nmap <silent> <leader>p :call mdip#MarkdownClipboardIm
 " there are some defaults for image directory and image name, you can change them
 " let g:mdip_imgdir = 'img'
 " let g:mdip_imgname = 'image'
+
+
+"Macros recorded 
+let @q = 'A date:date	jk0j'
+
+"Notes for system setup: 
+"defaults write com.apple.screencapture location /Users/joereddingtonfileless/Downloads/ is how you change the screenshot directory.

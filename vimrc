@@ -39,3 +39,10 @@ let @q = 'A date:date	jk0j'
 
 "Notes for system setup: 
 "defaults write com.apple.screencapture location /Users/joereddingtonfileless/Downloads/ is how you change the screenshot directory.
+"
+"
+
+" from [200~https://vi.stackexchange.com/a/14297/8792[201~
+if expand('%:t') == 'todo.txt'
+  set nowrap
+endif

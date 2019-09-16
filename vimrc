@@ -18,5 +18,7 @@ hi SpellBad cterm=underline
 let g:CommandTMaxFiles=300000
 inoremap jk <esc>
 inoremap <esc> <nop>
+set t_BE=
+"set t_BE= is there to stop the "[200" issue
 iabbrev lnn <C-R>=strftime('## %d/%m/%y %H:%M')<C-M>
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>

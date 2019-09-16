@@ -7,3 +7,9 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = https://github.com/wincent/command-t
+[submodule "bundle/md-img-paste.vim"]
+	path = bundle/md-img-paste.vim
+	url = https://github.com/joereddington/md-img-paste.vim
+[submodule "bundle/--force"]
+	path = bundle/--force
+	url = https://github.com/freitass/todo.txt-vim

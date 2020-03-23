@@ -6,6 +6,7 @@ filetype on
 filetype plugin on
 syntax on
 set lines=35 columns=90 "check these for full screen 
+set mouse=a
 set number
 set hidden
 set history=500

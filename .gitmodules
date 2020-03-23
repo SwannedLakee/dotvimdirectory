@@ -10,3 +10,6 @@
 [submodule "bundle/md-img-paste.vim"]
 	path = bundle/md-img-paste.vim
 	url = https://github.com/joereddington/md-img-paste.vim
+[submodule "bundle/vim-test"]
+	path = bundle/vim-test
+	url = https://github.com/janko/vim-test

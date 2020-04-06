@@ -1,3 +1,8 @@
+" From
+" https://stackoverflow.com/questions/19120629/vim-change-prompt-on-shell-escape 
+" You can learn about changing the prompt when dropping to shell. 
+
+
 "from https://gist.github.com/romainl/9970697
 "There are some system setup notes below. 
 set nocompatible "doens't try and do what VI does 
@@ -25,6 +30,7 @@ set t_BE=
 "set t_BE= is there to stop the "[200" issue
 iabbrev lnn <C-R>=strftime('## %d/%m/%y %H:%M')<C-M>
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
+map _ a̶jk<space>
 
 "to enable fuzzy search from https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs
 set path+=**
@@ -48,3 +54,46 @@ let @q = 'A date:date	jk0j'
 if expand('%:t') == 'todo.txt'
   set nowrap
 endif
+
+
+"from
+"https://vim.fandom.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE 
+"These should improve autocomplete 
+"The first step to "improve" the menu behavior is to execute this command:
+"
+set completeopt=longest,menuone
+"
+"The above command will change the 'completeopt' option so that Vim's popup
+"menu doesn't select the first completion item, but rather just inserts the
+"longest common text of all matches; and the menu will come up even if there's
+"only one match. (The longest setting is responsible for the former effect and
+"the menuone is responsible for the latter.)
+"
+"The next enhancement is the following mapping:
+"
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"
+"The above mapping will change the behavior of the <Enter> key when the popup
+"menu is visible. In that case the Enter key will simply select the
+"highlighted menu item, just as <C-Y> does.
+"
+"These two mappings further improve the completion popup menu:
+"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+"In the above mappings, the first will make <C-N> work the way it normally
+"does; however, when the menu appears, the <Down> key will be simulated. What
+"this accomplishes is it keeps a menu item always highlighted. This way you
+"can keep typing characters to narrow the matches, and the nearest match will
+"be selected so that you can hit Enter at any time to insert it. In the above
+"mappings, the second one is a little more exotic: it simulates <C-X><C-O> to
+"bring up the omni completion menu, then it simulates <C-N><C-P> to remove the
+"longest common text, and finally it simulates <Down> again to keep a match
+"highlighted. 
+
+"strikeout" 
+

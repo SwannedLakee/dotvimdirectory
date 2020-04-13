@@ -1,8 +1,7 @@
 " From
 " https://stackoverflow.com/questions/19120629/vim-change-prompt-on-shell-escape 
 " You can learn about changing the prompt when dropping to shell. 
-
-
+" Remove ALL autocommands for the current group.(stops them getting added twice if you source twice 
 "from https://gist.github.com/romainl/9970697
 "There are some system setup notes below. 
 set nocompatible "doens't try and do what VI does 
@@ -14,6 +13,8 @@ syntax on
 set lines=35 columns=90 "check these for full screen 
 set number
 set hidden
+set thesaurus=~/.vim/mthesaur.txt
+set dictionary=~/.vim/roget13a.txt
 set history=500
 set hlsearch "highlight search 
 set showmatch "When a bracket is inserted, breifly jump to the matching one. 
@@ -97,3 +98,6 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 
 "strikeout" 
 
+
+"To make the watcher work 
+autocmd BufWritePost log.md !echo "target=$(date +\%s)" > ~/flow.joereddington.com/todo.txt/submodules/watcher/lastwrite.js

@@ -24,7 +24,9 @@ inoremap <esc> <nop>
 set t_BE=
 "set t_BE= is there to stop the "[200" issue
 iabbrev lnn <C-R>=strftime('## %d/%m/%y %H:%M')<C-M>
+map lnu 016llcf, to 12:13,jk0
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
+
 
 "to enable fuzzy search from https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs
 set path+=**
@@ -48,3 +50,9 @@ let @q = 'A date:date	jk0j'
 if expand('%:t') == 'todo.txt'
   set nowrap
 endif
+if expand('%:t') == 'eqt.todo.txt'
+  set nowrap
+endif
+
+" It would be good to wrap the autocommands in groups as per
+" http://learnvimscriptthehardway.stevelosh.com/chapters/14.html 

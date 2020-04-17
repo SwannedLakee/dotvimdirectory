@@ -11,7 +11,9 @@ filetype on
 filetype plugin on
 syntax on
 set lines=35 columns=90 "check these for full screen 
+set backspace=indent,eol,start "make backspace work properly per https://vi.stackexchange.com/a/2163/8792
 set number
+
 set hidden
 set thesaurus=~/.vim/mthesaur.txt
 set dictionary=~/.vim/roget13a.txt

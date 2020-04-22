@@ -39,6 +39,7 @@ map _ a̶jk<space>
 
 "to enable fuzzy search from https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs
 set path+=**
+set wildmenu
 
 "From the paste and copy image vim plugin
 autocmd FileType markdown nmap <silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
@@ -108,6 +109,9 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 
 "strikeout" 
 
+
+"NOw Joe's own 
+set complete=.,w,b,u,t,i,k
 
 "To make the watcher work 
 autocmd BufWritePost log.md !echo "target=$(date +\%s)" > ~/flow.joereddington.com/todo.txt/submodules/watcher/lastwrite.js

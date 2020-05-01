@@ -109,9 +109,12 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 
 "strikeout" 
 
-
-"NOw Joe's own 
+"NOw Joe's own bit of autocomplete
 set complete=.,w,b,u,t,i,k
 
 "To make the watcher work 
 autocmd BufWritePost log.md !echo "target=$(date +\%s)" > ~/flow.joereddington.com/todo.txt/submodules/watcher/lastwrite.js
+
+
+"Showcommand 
+set showcmd

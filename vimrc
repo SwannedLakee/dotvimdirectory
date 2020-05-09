@@ -31,14 +31,13 @@ inoremap jk <esc>
 inoremap <esc> <nop>
 set t_BE=
 "set t_BE= is there to stop the "[200" issue
+" For log files 
 iabbrev lnn <C-R>=strftime('## %d/%m/%y %H:%M')<C-M>
-map lnu 016llcf, to 12:13,jk0
+map lnu :s/\(^.\{12}\d\d:\d\d\).*,/\1 to =strftime('%H:%M'),/g
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
 map _ a̶jk<space>
 
 
-"to enable fuzzy search from https://www.youtube.com/watch?v=XA2WjJbmmoM&list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs
-set path+=**
 set wildmenu
 
 "From the paste and copy image vim plugin

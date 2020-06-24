@@ -13,3 +13,6 @@
 [submodule "bundle/vim-test"]
 	path = bundle/vim-test
 	url = https://github.com/janko/vim-test
+[submodule "bundle/--force"]
+	path = bundle/--force
+	url = https://github.com/freitass/todo.txt-vim

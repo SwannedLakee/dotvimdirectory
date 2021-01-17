@@ -38,7 +38,7 @@ set t_BE=
 "set t_BE= is there to stop the "[200" issue
 " For log files 
 iabbrev lnn <C-R>=strftime('## %d/%m/%y %H:%M,')<C-M>
-map lnu :s/\(^.\{12}\d\d:\d\d\).*,/\1 to =strftime('%H:%M'),/g
+map lnu :s/\(^.\{12}\d\d:\d\d\).*,/\1 to =strftime('%H:%M'),/g <bar> :nohlsearch
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
 
 

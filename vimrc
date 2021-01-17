@@ -10,36 +10,39 @@ execute pathogen#infect()
 filetype on
 filetype plugin on
 syntax on
-set lines=35 columns=90 "check these for full screen 
-set mouse=a
+set lines=60 columns=90 "check these for full screen 
 set backspace=indent,eol,start "make backspace work properly per https://vi.stackexchange.com/a/2163/8792
 set number
 
-set hidden
+set hidden "Means we can have multiple hidden buffers
 set thesaurus=~/.vim/mthesaur.txt
 set dictionary=~/.vim/roget13a.txt
 set history=500
-set hlsearch "highlight search 
+set hlsearch "highlight search results 
 set showmatch "When a bracket is inserted, breifly jump to the matching one. 
 set ignorecase smartcase  "setting up search 
 set spell "Add spell checking 
 hi clear SpellBad "clear the highlighing for badly spelled words 
 hi SpellBad cterm=underline "set the highlighintg for badly spelt words 
-let g:CommandTMaxFiles=300000
+let g:CommandTMaxFiles=300000 "Part of the Command-T plugin (which I should investigate)
 
 "My subsitutions 
+"These are from Vimscript the hard way.
 inoremap jk <esc>
 inoremap <esc> <nop>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 set t_BE=
 "set t_BE= is there to stop the "[200" issue
 " For log files 
 iabbrev lnn <C-R>=strftime('## %d/%m/%y %H:%M,')<C-M>
 map lnu :s/\(^.\{12}\d\d:\d\d\).*,/\1 to =strftime('%H:%M'),/g
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
-map _ a̶jk<space>
 
 
-set wildmenu
+set wildmenu "Show suggestions when doing completion in command mode. 
 
 "From the paste and copy image vim plugin
 autocmd FileType markdown nmap <silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
@@ -56,13 +59,7 @@ let @q = 'A date:date	jk0j'
 "
 "
 
-" from [200~https://vi.stackexchange.com/a/14297/8792[201~
-if expand('%:t') == 'todo.txt'
-  set nowrap
-endif
-if expand('%:t') == 'eqt.todo.txt'
-  set nowrap
-endif
+au BufRead,BufNewFile *odo.txt setlocal nowrap
 
 " It would be good to wrap the autocommands in groups as per
 " http://learnvimscriptthehardway.stevelosh.com/chapters/14.html 
@@ -114,6 +111,7 @@ set complete=.,w,b,u,t,i,k
 
 "To make the watcher work 
 autocmd BufWritePost log.md !echo "target=$(date +\%s)" > ~/flow.joereddington.com/todo.txt/submodules/watcher/lastwrite.js
+autocmd BufWritePost buffer.md !echo "target=$(date +\%s)" > ~/tools/watching/lastwrite.js
 
 
 "Showcommand 

@@ -110,8 +110,8 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 set complete=.,w,b,u,t,i,k
 
 "To make the watcher work 
-autocmd BufWritePost log.md !echo "target=$(date +\%s)" > ~/flow.joereddington.com/todo.txt/submodules/watcher/lastwrite.js
-autocmd BufWritePost buffer.md !echo "target=$(date +\%s)" > ~/tools/watching/lastwrite.js
+"autocmd BufWritePost log.md !echo "target=$(date +\%s)" > ~/flow.joereddington.com/todo.txt/submodules/watcher/lastwrite.js
+"autocmd BufWritePost buffer.md !echo "target=$(date +\%s)" > ~/tools/watching/lastwrite.js
 
 
 "Showcommand 

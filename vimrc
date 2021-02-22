@@ -43,8 +43,9 @@ iabbrev lnn <C-R>=strftime('## %d/%m/%y %H:%M,')<C-M>
 map lnu :s/\(^.\{12}\d\d:\d\d\).*,/\1 to =strftime('%H:%M'),/g <bar> :nohlsearch <bar>f,l
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
 inoremap lnp ![Images description]({% link assets/images/ %})/Imaci]
-map lnc yy :r !python3 /Users/Shared/git/watson/command_list.py """
+noremap lnc yy :r !python3 /Users/Shared/git/watson/command_list.py """
 
+noremap gu ?httpy/[ )]:! open "
 
 
 

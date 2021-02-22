@@ -11,6 +11,7 @@ filetype on
 filetype plugin on
 syntax on
 set lines=60 columns=90 "check these for full screen 
+set shiftwidth=2
 set backspace=indent,eol,start "make backspace work properly per https://vi.stackexchange.com/a/2163/8792
 set number
 

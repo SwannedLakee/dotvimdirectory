@@ -16,3 +16,6 @@
 [submodule "bundle/--force"]
 	path = bundle/--force
 	url = https://github.com/freitass/todo.txt-vim
+[submodule "bundle/vim-markdown-folding"]
+	path = bundle/vim-markdown-folding
+	url = https://github.com/mikeboiko/vim-markdown-folding

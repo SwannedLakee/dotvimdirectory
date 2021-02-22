@@ -37,11 +37,19 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 set t_BE=
 "set t_BE= is there to stop the "[200" issue
+"
 " For log files 
 iabbrev lnn <C-R>=strftime('## %d/%m/%y %H:%M,')<C-M>
 map lnu :s/\(^.\{12}\d\d:\d\d\).*,/\1 to =strftime('%H:%M'),/g <bar> :nohlsearch <bar>f,l
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
 inoremap lnp ![Images description]({% link assets/images/ %})/Imaci]
+map lnc yy :r !python3 git/watson/command_list.py """
+
+
+
+
+
+
 
 set wildmenu "Show suggestions when doing completion in command mode. 
 
@@ -119,7 +127,3 @@ set complete=.,w,b,u,t,i,k
 set showcmd
 
 
-function Insertimage(file,name)
-	echom "!mv a:file to a:name"
-
-endfunction

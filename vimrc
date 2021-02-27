@@ -4,6 +4,12 @@
 " Remove ALL autocommands for the current group.(stops them getting added twice if you source twice 
 "from https://gist.github.com/romainl/9970697
 "There are some system setup notes below. 
+
+"Dealing with the directory being in an usual place
+set runtimepath=/Users/Shared/git/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim8/after
+set packpath=~/.vim8,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim8/after
+let $VIMHOME = '/Users/Shared/git/.vim/'
+"
 set nocompatible "doens't try and do what VI does 
 execute pathogen#infect() 
 "All (the rest)setup initially from http://marcgg.com/blog/2016/03/01/vimrc-example/
@@ -16,7 +22,7 @@ set backspace=indent,eol,start "make backspace work properly per https://vi.stac
 set number
 
 set hidden "Means we can have multiple hidden buffers
-set thesaurus=~/.vim/mthesaur.txt
+set thesaurus=$VIMHOME/mthesaur.txt
 set dictionary=~/.vim/roget13a.txt
 set history=500
 set hlsearch "highlight search results 
@@ -43,12 +49,12 @@ iabbrev lnn <C-R>=strftime('## %d/%m/%y %H:%M,')<C-M>
 map lnu :s/\(^.\{12}\d\d:\d\d\).*,/\1 to =strftime('%H:%M'),/g <bar> :nohlsearch <bar>f,l
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
 inoremap lnp ![Images description]({% link assets/images/ %})/Imaci]
-noremap lnc yy :r !python3 /Users/Shared/git/watson/command_list.py """
+noremap lnc 0f y$ :r !python3 /Users/Shared/git/watson/command_list.py """
 
 noremap gu ?httpy/[ )]:! open "
 
 
-
+ 
 
 
 

@@ -16,7 +16,7 @@ execute pathogen#infect()
 filetype on
 filetype plugin on
 syntax on
-set lines=60 columns=90 "check these for full screen 
+"set lines=60 columns=90 "check these for full screen 
 set shiftwidth=2
 set backspace=indent,eol,start "make backspace work properly per https://vi.stackexchange.com/a/2163/8792
 set number
@@ -50,8 +50,9 @@ map lnu :s/\(^.\{12}\d\d:\d\d\).*,/\1 to =strftime('%H:%M'),/g <bar> :nohlsea
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
 inoremap lnp ![Images description]({% link assets/images/ %})/Imaci]
 noremap lnc 0f y$ :r !python3 /Users/Shared/git/watson/command_list.py """
+noremap lnh 0f y$ :r !/Users/Shared/git/watson/history_list.sh """
 
-noremap gu ?httpy/[ )]:! open "
+noremap gu ?httpy/[ )]:! open ":nohlsearch
 
 
  
@@ -133,4 +134,5 @@ set complete=.,w,b,u,t,i,k
 "Showcommand 
 set showcmd
 
-
+"## 05/03/21 07:14, Changing the font
+:set guifont=Menlo:h12

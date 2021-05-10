@@ -136,3 +136,7 @@ set showcmd
 
 "## 05/03/21 07:14, Changing the font
 :set guifont=Menlo:h12
+
+
+"For the same url on multiple lines
+:match Conceal /http\(.*\)\n\%(.*\1\n\)\+/

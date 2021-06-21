@@ -127,8 +127,7 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 set complete=.,w,b,u,t,i,k
 
 "To make the watcher work 
-"autocmd BufWritePost log.md !echo "target=$(date +\%s)" > ~/flow.joereddington.com/todo.txt/submodules/watcher/lastwrite.js
-"autocmd BufWritePost buffer.md !echo "target=$(date +\%s)" > ~/tools/watching/lastwrite.js
+autocmd BufWritePost inbox.md !echo "target=$(date +\%s)" > ~/git/watching/lastwrite.js
 
 
 "Showcommand 
@@ -139,4 +138,7 @@ set showcmd
 
 
 "For the same url on multiple lines
-:match Conceal /http\(.*\)\n\%(.*\1\n\)\+/
+match Conceal /http\(.*\)\n\%(.*\1\n\)\+/
+
+
+

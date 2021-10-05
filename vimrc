@@ -18,6 +18,8 @@ filetype plugin on
 syntax on
 "set lines=60 columns=90 "check these for full screen 
 set shiftwidth=2
+set tabstop=2
+set expandtab
 set backspace=indent,eol,start "make backspace work properly per https://vi.stackexchange.com/a/2163/8792
 set number
 
@@ -36,6 +38,8 @@ let g:CommandTMaxFiles=300000 "Part of the Command-T plugin (which I should inve
 "My subsitutions 
 "These are from Vimscript the hard way.
 inoremap jk <esc>
+nnoremap gp `[v`] 
+"gp is from https://stackoverflow.com/a/4313335/170243
 inoremap <esc> <nop>
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -141,4 +145,12 @@ set showcmd
 match Conceal /http\(.*\)\n\%(.*\1\n\)\+/
 
 
+" To get taglist working via https://vi.stackexchange.com/a/31712/8792
+let tlist_markdown_settings = 'markdown;f:Heading'
+let Tlist_Auto_Open = 1
 
+
+"netrw comments from https://shapeshed.com/vim-netrw/
+let g:netrw_browse_split = 4 "Open in split 
+let g:netrw_winsize=25 "Take up 25%
+let g:netrw_list_hide='.*.swp*' "hide these files 

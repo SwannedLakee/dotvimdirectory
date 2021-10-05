@@ -19,3 +19,6 @@
 [submodule "bundle/vim-markdown-folding"]
 	path = bundle/vim-markdown-folding
 	url = https://github.com/mikeboiko/vim-markdown-folding
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = https://github.com/yegappan/taglist

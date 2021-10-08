@@ -16,9 +16,15 @@
 [submodule "bundle/--force"]
 	path = bundle/--force
 	url = https://github.com/freitass/todo.txt-vim
-[submodule "bundle/vim-markdown-folding"]
-	path = bundle/vim-markdown-folding
-	url = https://github.com/mikeboiko/vim-markdown-folding
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = https://github.com/yegappan/taglist
+[submodule "bundle/ShowMarks"]
+	path = bundle/ShowMarks
+	url = https://github.com/vim-scripts/ShowMarks
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "bundle/vim-peekaboo"]
+	path = bundle/vim-peekaboo
+	url = https://github.com/junegunn/vim-peekaboo

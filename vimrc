@@ -154,3 +154,8 @@ let Tlist_Auto_Open = 1
 let g:netrw_browse_split = 4 "Open in split 
 let g:netrw_winsize=25 "Take up 25%
 let g:netrw_list_hide='.*.swp*' "hide these files 
+
+
+"set font 
+set guifont=Menlo\ Regular:h20 
+

@@ -174,3 +174,7 @@ let g:netrw_list_hide='.*.swp*' "hide these files
 "set font 
 set guifont=Menlo\ Regular:h20 
 
+
+"Make Text to speech work 
+:vnoremap <silent><leader>v "xy:call system('say '. shellescape(@x) .' &')<CR>
+:nnoremap <silent><leader>v :call system('say '.shellescape(expand('<cword>')).' &')<CR>

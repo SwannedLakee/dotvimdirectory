@@ -147,6 +147,7 @@ set complete=.,w,b,u,t,i,k
 
 "To make the watcher work 
 autocmd BufWritePost inbox.md !echo "target=$(date +\%s)" > ~/git/watching/lastwrite.js
+"TODO: this should be in the mac only section
 
 
 "Showcommand 
@@ -178,3 +179,4 @@ set guifont=Menlo\ Regular:h20
 "Make Text to speech work 
 :vnoremap <silent><leader>v "xy:call system('say '. shellescape(@x) .' &')<CR>
 :nnoremap <silent><leader>v :call system('say '.shellescape(expand('<cword>')).' &')<CR>
+"TODO: this should be in the mac only section. 

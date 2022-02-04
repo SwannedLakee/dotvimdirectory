@@ -69,7 +69,7 @@ map lnu :s/\(^.\{12}\d\d:\d\d\).*,/\1 to =strftime('%H:%M'),/g <bar> :nohlsea
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
 inoremap lnp ![Images description]({% link assets/images/ %})/Imaci]
 noremap lnc 0f y$ :r !python3 /Users/Shared/git/watson/command_list.py """
-noremap lnh 0f y$ :r !/Users/Shared/git/watson/history_list.sh """
+noremap lnh 0f y$ :r !"/Volumes/Crucial X8/git/export-history/history_list.sh" """
 
 noremap gu ?httpy/[ )]:! open ":nohlsearch
 
@@ -158,7 +158,7 @@ set showcmd
 
 
 "For the same url on multiple lines
-match Conceal /http\(.*\)\n\%(.*\1\n\)\+/
+" match Conceal /http\(.*\)\n\%(.*\1\n\)\+/
 
 
 " To get taglist working via https://vi.stackexchange.com/a/31712/8792
@@ -180,3 +180,31 @@ set guifont=Menlo\ Regular:h20
 :vnoremap <silent><leader>v "xy:call system('say '. shellescape(@x) .' &')<CR>
 :nnoremap <silent><leader>v :call system('say '.shellescape(expand('<cword>')).' &')<CR>
 "TODO: this should be in the mac only section. 
+
+
+
+
+"from https://vim.fandom.com/wiki/Make_footnotes_in_vim
+inoremap ,f <Esc>:call VimFootnotes()<CR>
+function! VimFootnotes()
+  execute "normal ma"
+  let footNoteText = input("enter text for footnote: ")
+  if exists("b:vimfootnotenumber")
+    let b:vimfootnotenumber = b:vimfootnotenumber + 1
+    let cr = ""
+  else
+    let b:vimfootnotenumber = 0
+    let cr = "\<CR>"
+  endif
+  let b:pos = line('.').' | normal! '.virtcol('.').'|'.'4l'
+  exe "normal a".b:vimfootnotenumber."S\<Esc>"
+  if search("-- $", "b")
+    exe "normal o".cr."".b:vimfootnotenumber."S " . footNoteText
+  else
+    exe "normal o".cr."".b:vimfootnotenumber."S " . footNoteText
+  endif
+  execute "normal `aA"
+endfunction
+
+
+

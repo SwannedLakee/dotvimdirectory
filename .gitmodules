@@ -28,3 +28,6 @@
 [submodule "bundle/vim-peekaboo"]
 	path = bundle/vim-peekaboo
 	url = https://github.com/junegunn/vim-peekaboo
+[submodule "bundle/vim-buffergator"]
+	path = bundle/vim-buffergator
+	url = https://github.com/jeetsukumaran/vim-buffergator

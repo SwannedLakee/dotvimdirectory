@@ -16,9 +16,6 @@
 [submodule "bundle/--force"]
 	path = bundle/--force
 	url = https://github.com/freitass/todo.txt-vim
-[submodule "bundle/taglist"]
-	path = bundle/taglist
-	url = https://github.com/yegappan/taglist
 [submodule "bundle/ShowMarks"]
 	path = bundle/ShowMarks
 	url = https://github.com/vim-scripts/ShowMarks

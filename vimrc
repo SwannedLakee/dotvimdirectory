@@ -6,25 +6,6 @@
 "There are some system setup notes below. 
 
 
-function! WhichEnv() abort "from https://vimways.org/2018/make-your-setup-truly-cross-platform/
-    if has('win64') || has('win32') || has('win16')
-        return 'WINDOWS'
-    else
-       return toupper(substitute(system('uname'), '\n', '', ''))
-    endif
-endfunction
-
-if (WhichEnv() =~# 'DARWIN')
-            "Dealing with the directory being in an usual place
-            set runtimepath=/Users/Shared/git/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim8/after
-            set packpath=~/.vim8,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim8/after
-            let $VIMHOME = '/Users/Shared/git/.vim/'
-            else
-                " Other cases I can't think of like MINGW
-                endif
-
-
-
 set nocompatible "doens't try and do what VI does 
 execute pathogen#infect() 
 "All (the rest)setup initially from http://marcgg.com/blog/2016/03/01/vimrc-example/

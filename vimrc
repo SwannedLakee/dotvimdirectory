@@ -5,30 +5,30 @@
 "from https://gist.github.com/romainl/9970697
 "There are some system setup notes below. 
 
-
+set shell=/bin/bash
 set nocompatible "doens't try and do what VI does 
 execute pathogen#infect() 
-"All (the rest)setup initially from http://marcgg.com/blog/2016/03/01/vimrc-example/
+"The rest of the setup initially from http://marcgg.com/blog/2016/03/01/vimrc-example/
 filetype on
 filetype plugin on
 syntax on
-"set lines=60 columns=90 "check these for full screen 
 set shiftwidth=2
 set tabstop=2
 set expandtab
 set backspace=indent,eol,start "make backspace work properly per https://vi.stackexchange.com/a/2163/8792
 set number
-
 set hidden "Means we can have multiple hidden buffers
 set thesaurus=$VIMHOME/mthesaur.txt
 set dictionary=~/.vim/roget13a.txt
-set history=500
+set history=5000 
 set hlsearch "highlight search results 
 set showmatch "When a bracket is inserted, breifly jump to the matching one. 
 set ignorecase smartcase  "setting up search 
 set spell "Add spell checking 
+"
 hi clear SpellBad "clear the highlighing for badly spelled words 
 hi SpellBad cterm=underline "set the highlighintg for badly spelt words 
+" 
 let g:CommandTMaxFiles=300000 "Part of the Command-T plugin (which I should investigate)
 
 "My subsitutions 
@@ -44,28 +44,19 @@ noremap <Right> <Nop>
 set t_BE=
 "set t_BE= is there to stop the "[200" issue
 "
-" For log files 
+" For log files  TODO: have these only activate for *.md files 
 iabbrev lnn <C-R>=strftime('## %d/%m/%y %H:%M,')<C-M>
 map lnu :s/\(^.\{12}\d\d:\d\d\).\{-},/\1 to =strftime('%H:%M'),/g <bar> :nohlsearch <bar>f,l
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
 inoremap lnp ![Images description]({% link assets/images/ %})/Imaci]
-noremap lnc 0f y$ :r !python3 /Users/Shared/git/watson/command_list.py """
+noremap lnc 0f y$ :r !python3  "/Volumes/Crucial X8/git/watson/command_list.py" """
 noremap lnh 0f y$ :r !"/Volumes/Crucial X8/git/export-history/history_list.sh" """
 
 noremap gu ?httpy/[ )]:! open ":nohlsearch
 
 
- 
-
-
 
 set wildmenu "Show suggestions when doing completion in command mode. 
-
-"From the paste and copy image vim plugin
-autocmd FileType markdown nmap <silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
-" there are some defaults for image directory and image name, you can change them
-" let g:mdip_imgdir = 'img'
-" let g:mdip_imgname = 'image'
 
 
 "Macros recorded 
@@ -163,6 +154,8 @@ set guifont=Menlo\ Regular:h20
 "TODO: this should be in the mac only section. 
 
 
+"Put all the swap files in a clearable directory 
+set directory=~/Downloads
 
 
 "from https://vim.fandom.com/wiki/Make_footnotes_in_vim
@@ -188,4 +181,7 @@ function! VimFootnotes()
 endfunction
 
 
-
+"
+" Write with sudo 
+" 
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!

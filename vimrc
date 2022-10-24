@@ -46,6 +46,7 @@ set t_BE=
 "
 " For log files  TODO: have these only activate for *.md files 
 iabbrev lnn <C-R>=strftime('## %d/%m/%y %H:%M,')<C-M>
+noremap lnm  0yypEEWdW.f,C,
 map lnu :s/\(^.\{12}\d\d:\d\d\).\{-},/\1 to =strftime('%H:%M'),/g <bar> :nohlsearch <bar>f,l
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
 inoremap lnp ![Images description]({% link assets/images/ %})/Imaci]
@@ -181,7 +182,11 @@ function! VimFootnotes()
 endfunction
 
 
+"Write with sudo
 "
-" Write with sudo 
+" Sample command W
 " 
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+
+
+:set viminfo=!,'10000,<50,s10,h,:10000  "apparently increses the size of the command history

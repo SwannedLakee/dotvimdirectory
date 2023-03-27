@@ -1,0 +1,3 @@
+"To make the watcher work 
+autocmd BufWritePost inbox.md !echo "target=$(date +\%s)" > ~/git/watching/lastwrite.js
+"TODO: this should be in the mac only section

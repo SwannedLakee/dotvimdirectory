@@ -1,0 +1,6 @@
+# Block outgoing connections from Firefox
+block out on en0 from any to any app Firefox
+
+# Allow outgoing connections from Spotify
+pass out on en0 from any to any app Spotify
+

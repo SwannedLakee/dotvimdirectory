@@ -25,7 +25,7 @@ set hlsearch "highlight search results
 set showmatch "When a bracket is inserted, breifly jump to the matching one. 
 set ignorecase smartcase  "setting up search 
 set spell "Add spell checking 
-"
+set spellsuggest=double " More thorough spelling suggestions 
 hi clear SpellBad "clear the highlighing for badly spelled words 
 hi SpellBad cterm=underline "set the highlighintg for badly spelt words 
 " 
@@ -177,11 +177,10 @@ endfunction
 "
 " Sample command W
 " 
-command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+command SW :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 
 :set viminfo=!,'10000,<50,s10,h,:10000  "apparently increses the size of the command history
-
 
 "for ubuntu 
 noremap  "+y "Set a global copy 
@@ -198,6 +197,9 @@ autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownCli
 let g:mdip_imgdir_absolute =  '/home/joe/git/joereddington.github.io/assets/images/'
 let g:mdip_imgdir_intext = '/assets/images'
 
-
-
+" from https://github.com/onivim/oni/issues/2342 to solve the issue mentioned:
+"  
+" that shift and space renders as ;2u
+" https://github.com/onivim/oni/issues/2342
+tnoremap <s-space> <space>
 

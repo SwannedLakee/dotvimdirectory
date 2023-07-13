@@ -1,0 +1,14 @@
+%s/”/\'\'/gc
+%s/“/ ``/gc
+%s/\s*"/ ``/gc
+%s/" /\'\'/gc
+%s/,/, /gc
+%s/ ,/,/gc
+%s/ !/!/gc
+%s/&/ and /gc
+%s,\n,\n\n,gc
+%s/\em/\em /gc
+%s/’/\'/gc
+%s/‎//gc
+%s/***/\\split}/gc
+

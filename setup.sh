@@ -11,5 +11,5 @@ cd ../.. #should be root # Why is this here?
 ln -s ~/.vim/vimrc ~/.vimrc
 
 # Some reminders
-echo "Don't forget the .bashrc files
+echo "Don't forget the .bashrc files"
 

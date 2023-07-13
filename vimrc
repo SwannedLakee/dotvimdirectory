@@ -181,3 +181,23 @@ command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 
 :set viminfo=!,'10000,<50,s10,h,:10000  "apparently increses the size of the command history
+
+
+"for ubuntu 
+noremap  "+y "Set a global copy 
+noremap  ggVG  
+set mouse=a
+
+
+"Commands for img-paste
+autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+" there are some defaults for image directory and image name, you can change them
+"let g:mdip_imgdir = 'images'
+"let g:mdip_imgname = 'image'
+
+let g:mdip_imgdir_absolute =  '/home/joe/git/joereddington.github.io/assets/images/'
+let g:mdip_imgdir_intext = '/assets/images'
+
+
+
+

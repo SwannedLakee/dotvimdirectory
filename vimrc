@@ -50,8 +50,9 @@ noremap lnm  0yypEEWdW.f,C,
 map lnu :s/\(^.\{12}\d\d:\d\d\).\{-},/\1 to =strftime('%H:%M'),/g <bar> :nohlsearch <bar>f,l
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
 inoremap lnp ![Images description]({% link assets/images/ %})/Imaci]
-noremap lnc 0f y$ :r !python3  "/Volumes/Crucial X8/git/watson/command_list.py" """
+noremap lnc 0f y$ :r !python3  "/home/joe/git/watson/command_list.py" """
 noremap lnh 0f y$ :r !"/Volumes/Crucial X8/git/export-history/history_list.sh" """
+noremap lnh 0f y$ :r !"/home/joe/git/export-history/history_list.sh" """
 
 noremap gu ?httpy/[ )]:! open ":nohlsearch
 
@@ -202,4 +203,11 @@ let g:mdip_imgdir_intext = '/assets/images'
 " that shift and space renders as ;2u
 " https://github.com/onivim/oni/issues/2342
 tnoremap <s-space> <space>
+
+
+
+set title "So that showcuts wordks
+" Set the terminal title to include "vim" when entering Vim ( I don't know if
+" this does anything
+autocmd VimEnter * call system("printf '\033]0;vim %s\007' " .  expand("%:t"))
 

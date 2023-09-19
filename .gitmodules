@@ -16,9 +16,6 @@
 [submodule "bundle/--force"]
 	path = bundle/--force
 	url = https://github.com/freitass/todo.txt-vim
-[submodule "bundle/ShowMarks"]
-	path = bundle/ShowMarks
-	url = https://github.com/vim-scripts/ShowMarks
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive

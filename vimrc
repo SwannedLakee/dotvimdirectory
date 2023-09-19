@@ -51,7 +51,6 @@ map lnu :s/\(^.\{12}\d\d:\d\d\).\{-},/\1 to =strftime('%H:%M'),/g <bar> :nohl
 iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
 inoremap lnp ![Images description]({% link assets/images/ %})/Imaci]
 noremap lnc 0f y$ :r !python3  "/home/joe/git/watson/command_list.py" """
-noremap lnh 0f y$ :r !"/Volumes/Crucial X8/git/export-history/history_list.sh" """
 noremap lnh 0f y$ :r !"/home/joe/git/export-history/history_list.sh" """
 
 noremap gu ?httpy/[ )]:! open ":nohlsearch

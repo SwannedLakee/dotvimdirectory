@@ -34,3 +34,6 @@
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary
+[submodule "bundle/vim-jekyll"]
+	path = bundle/vim-jekyll
+	url = https://github.com/parkr/vim-jekyll

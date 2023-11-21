@@ -194,3 +194,5 @@ tnoremap <s-space> <space>
 " this does anything
 autocmd VimEnter * call system("printf '\033]0;vim %s\007' " .  expand("%:t"))
 
+
+noremap ,ny :! /bin/bash /home/joe/git/delores/mcve.sh<cr>

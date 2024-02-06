@@ -4,6 +4,8 @@
 # Tidy for macOS is adding the new path for Tidy.
 export PATH=/usr/local/bin:$PATH
 
+export PATH=/home/joe/.local/bin:$PATH
+
 
 
 
@@ -11,3 +13,5 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 
 
+setxkbmap us
+xmodmap ~/.Xmodmap 

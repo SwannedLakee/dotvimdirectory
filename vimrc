@@ -195,4 +195,22 @@ tnoremap <s-space> <space>
 autocmd VimEnter * call system("printf '\033]0;vim %s\007' " .  expand("%:t"))
 
 
-noremap ,ny :! /bin/bash /home/joe/git/delores/mcve.sh<cr>
+noremap ,ny :! /bin/bash /home/joe/git/delores/from_command_line.sh y<cr>
+
+
+" Define a custom command 'sumlines' that calculates the sum of selected lines
+command! -range SumLines :call SumSelectedLines(<line1>, <line2>)
+
+" Function to sum the selected lines and display the result
+function! SumSelectedLines(line1, line2)
+    let total = 0
+    for line in range(a:line1, a:line2)
+        let line_text = getline(line)
+        let number = matchstr(line_text, '\d\+')
+        if !empty(number)
+            let total += str2nr(number)
+        endif
+    endfor
+    echo 'Sum: ' . total
+endfunction
+

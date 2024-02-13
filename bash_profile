@@ -15,3 +15,5 @@ export PATH=/usr/local/bin:$PATH
 
 setxkbmap us
 xmodmap ~/.Xmodmap 
+
+echo "hello"

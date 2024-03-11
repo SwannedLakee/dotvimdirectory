@@ -51,6 +51,11 @@ noremap lnh 0f y$ :r !"/home/joe/git/historycode/history_list.sh" """
 noremap gu ?httpy/[ )]:! open ":nohlsearch
 " END LOG COMMANDS 
 
+" Map 'lnd' to list current titles of Firefox windows
+iabbrev lnn <C-R>=strftime('## %d/%m/%y %H:%M,')<C-M>
+nnoremap lnx :r !~/.vim/grab_delores.sh<CR>
+
+
 
 
 let g:CommandTMaxFiles=300000 "Part of the Command-T plugin (which I should investigate)
@@ -213,4 +218,12 @@ function! SumSelectedLines(line1, line2)
     endfor
     echo 'Sum: ' . total
 endfunction
+
+"fix the wildmode
+set wildmode=longest,list
+
+
+"Themes and colours 
+nnoremap <PageUp> :CycleColorNext<CR>
+nnoremap <PageDown> :CycleColorPrev<CR>
 

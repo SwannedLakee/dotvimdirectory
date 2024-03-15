@@ -1,8 +1,9 @@
 #!/usr/bin/env bash 
 #Following section from https://stackoverflow.com/a/246128/170243
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-cd /home/joe/  #should be root # Why is this here?  
-ln -s /home/joe/git/dotvimdirectory/ /home/joe/.vim
+
+cd $HOME  
+ln -s $HOME/git/dotvimdirectory/ $HOME/.vim
 ln -s .vim/vimrc .vimrc
 
 cd $SCRIPT_DIR

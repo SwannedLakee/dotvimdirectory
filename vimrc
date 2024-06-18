@@ -186,6 +186,10 @@ autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownCli
 
 let g:mdip_imgdir_absolute =  '/home/joe/git/joereddington.github.io/assets/images/'
 let g:mdip_imgdir_intext = '/assets/images'
+if has("mac")
+  let g:mdip_imgdir_absolute =  '/Users/ppac065/git/joereddington.github.io/assets/images'
+  let g:mdip_imgdir_intext = '/assets/images'
+endif
 
 " from https://github.com/onivim/oni/issues/2342 to solve the issue mentioned:
 "  

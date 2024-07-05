@@ -16,11 +16,13 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=200000
 
 # Append timestamp to history entries
 export HISTTIMEFORMAT='%F %T '
+shopt -s histappend
+PROMPT_COMMAND='history -a; history -n'
 
 
 # check the window size after each command and, if necessary,
@@ -128,3 +130,4 @@ export PATH="$HOME/gems/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+setxkbmap us 

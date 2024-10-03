@@ -213,3 +213,26 @@ set wildmode=longest,list
 nnoremap <PageUp> :CycleColorNext<CR>
 nnoremap <PageDown> :CycleColorPrev<CR>
 
+"Custom command for processing inboxj k:w
+function! MoveSelectionToDiary()
+    " Cut the selected text and store in register a
+    normal! "ay
+
+    " Open diary/index.md, move to the end, paste the text
+    execute 'silent! e diary/index.md'
+    execute 'normal! Go'
+    normal! "ap
+    " Save the changes
+    execute 'silent! w'
+
+    " Return to the original file
+    execute 'b#'
+endfunction
+
+" Map a key combination to the function
+vnoremap <leader>m d:split diary/index.mdG$p:w:q
+
+
+
+
+

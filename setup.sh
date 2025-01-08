@@ -14,5 +14,5 @@ git submodule update
 # Link the vimrc file 
 
 # Some reminders
+echo "Test by 'vim' and seeing if buffergator and 'jk' work"
 echo "Don't forget the .bashrc files"
-

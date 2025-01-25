@@ -217,7 +217,7 @@ set wildmode=longest,list
 nnoremap <PageUp> :CycleColorNext<CR>
 nnoremap <PageDown> :CycleColorPrev<CR>
 
-"Custom command for processing inboxj k:w
+"Custom command for processing inbox 
 function! MoveSelectionToDiary()
     " Cut the selected text and store in register a
     normal! "ay
@@ -233,10 +233,9 @@ function! MoveSelectionToDiary()
     execute 'b#'
 endfunction
 
-" Map a key combination to the function
+" Map a key combination to the function MoveSelectionToDiary above
 vnoremap <leader>m d:split diary/index.mdG$p:w:q
 
-
-
-
+"Make latex files o
+autocmd FileType tex setlocal makeprg=make
 

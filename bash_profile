@@ -14,7 +14,7 @@ export PATH=/usr/local/bin:$PATH
 
 setxkbmap us
 
-
+export iterm2_hostname=JoeTower
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 echo "Leaving .bash_profile"
 

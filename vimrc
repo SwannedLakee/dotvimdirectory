@@ -239,3 +239,4 @@ vnoremap <leader>m d:split diary/index.mdG$p:w:q
 "Make latex files o
 autocmd FileType tex setlocal makeprg=make
 
+let g:todo_done_filename = 'done.txt'

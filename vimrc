@@ -240,3 +240,9 @@ vnoremap <leader>m d:split diary/index.mdG$p:w:q
 autocmd FileType tex setlocal makeprg=make
 
 let g:todo_done_filename = 'done.txt'
+
+
+nnoremap <leader>1 r✅
+nnoremap <leader>2 r⏳
+nnoremap <leader>3 r🚫
+nnoremap <leader>4 r📥

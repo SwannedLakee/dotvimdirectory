@@ -241,8 +241,8 @@ autocmd FileType tex setlocal makeprg=make
 
 let g:todo_done_filename = 'done.txt'
 
+"For skim 
+let g:vimtex_view_method = 'skim'
+let g:vimtex_view_skim_sync = 1
+let g:vimtex_view_skim_activate = 1
 
-nnoremap <leader>1 r✅
-nnoremap <leader>2 r⏳
-nnoremap <leader>3 r🚫
-nnoremap <leader>4 r📥

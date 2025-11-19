@@ -34,3 +34,6 @@
 [submodule "bundle/vim-jekyll"]
 	path = bundle/vim-jekyll
 	url = https://github.com/itspriddle/vim-jekyll
+[submodule "bundle/vimtex"]
+	path = bundle/vimtex
+	url = https://github.com/lervag/vimtex.git

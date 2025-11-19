@@ -2,6 +2,11 @@
 echo "We have entered .bash_profile"
 # This runs when I ssh in from another computer
 
+# In ~/.bash_profile
+ if [ -f ~/.bashrc ]; then
+     . ~/.bashrc
+     fi
+
 # Tidy for macOS is adding the new path for Tidy.
 export PATH=/usr/local/bin:$PATH
 

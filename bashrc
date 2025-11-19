@@ -22,9 +22,20 @@ HISTFILESIZE=200000
 # Append timestamp to history entries
 export HISTTIMEFORMAT='%F %T '
 shopt -s histappend
-PROMPT_COMMAND='history -a; history -n; history -c; history -r'
 
 
+# --- Begin custom persistent history logging ---
+export HISTTIMEFORMAT='%F %T '
+export ALL_HISTORY_FILE=~/.all_history
+
+log_command() {
+  local last_command="$(history 1)"
+    echo "$(date '+%F %T') $(whoami) $(tty): $last_command" >> "$ALL_HISTORY_FILE"
+    }
+
+    # --- End custom persistent history logging ---
+
+PROMPT_COMMAND="log_command; history -a; history -n"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -130,3 +141,6 @@ export NVM_DIR="$HOME/.nvm"
 sleep 0.5
 setxkbmap us
 xmodmap ~/.Xmodmap
+
+
+alias vim='vim -w ~/.vim_keystrokes.log'

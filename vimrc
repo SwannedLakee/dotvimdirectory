@@ -48,7 +48,6 @@ iabbrev SAS <C-R>=strftime('- %d/%m/%y smallest next step: ')<C-M>
 inoremap lnp ![Images description]({% link assets/images/ %})/Imaci]
 noremap lnc 0f y$ :r !python3  "/home/joe/git/watson/command_list.py" """
 noremap lnh 0f y$ :r !"/home/joe/git/historycode/history_list.sh" """
-noremap gu ?httpy/[ )]:! open ":nohlsearch
 " END LOG COMMANDS 
 
 " Map 'lnd' to list current titles of Firefox windows
@@ -255,3 +254,6 @@ let g:vimtex_view_method = 'skim'
 let g:vimtex_view_skim_sync = 1
 let g:vimtex_view_skim_activate = 1
 
+let g:vimtex_quickfix_ignore_filters = [
+      \ 'Overfull \\hbox',
+      \ ]
